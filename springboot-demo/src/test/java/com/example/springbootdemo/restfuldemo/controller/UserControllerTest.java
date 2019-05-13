@@ -65,7 +65,21 @@ public class UserControllerTest {
         } catch (Exception var2) {
             log.error("异常信息{}", var2);
         }
+    }
 
+    @Test
+    public void saveByResultVo() {
+        try {
+            UserForm userForm = UserFormData.getUserForm();
+            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.post("/saveByResultVo", new Object[0]);
+            mockHttpServletRequestBuilder.contentType(MediaType.APPLICATION_JSON);
+            mockHttpServletRequestBuilder.content(this.objectMapper.writeValueAsString(userForm));
+            MvcResult mvcResult = this.getMvcResult(mockHttpServletRequestBuilder);
+            MockHttpServletResponse response = mvcResult.getResponse();
+            log.info("输出结果{}", response.getContentAsString());
+        } catch (Exception var5) {
+            log.error("异常信息{}", var5);
+        }
     }
 
     @Test
@@ -81,7 +95,6 @@ public class UserControllerTest {
         } catch (Exception var5) {
             log.error("异常信息{}", var5);
         }
-
     }
 
     @Test

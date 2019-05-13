@@ -1,5 +1,6 @@
 package com.example.springbootdemo.restfuldemo.controller;
 
+import com.example.springbootdemo.common.ResultVO;
 import com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
 import com.example.springbootdemo.restfuldemo.service.UserService;
@@ -23,6 +24,18 @@ public class UserController {
 	public String hello() {
 		return "hello word";
 	}
+
+
+	/**
+	 * 新增
+	 *@param userForm
+	 * @return
+	 */
+	@PostMapping("/saveByResultVo")
+	public ResultVO<UserEntity> saveByResultVo(@RequestBody UserForm userForm) {
+		return userService.saveByResultVo(userForm);
+	}
+
 
 
 	/**

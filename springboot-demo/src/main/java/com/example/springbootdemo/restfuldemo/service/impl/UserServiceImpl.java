@@ -1,12 +1,17 @@
 package com.example.springbootdemo.restfuldemo.service.impl;
 
 
+import com.example.springbootdemo.common.ResultVO;
+import com.example.springbootdemo.common.ResultVOBuilder;
 import com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
 import com.example.springbootdemo.restfuldemo.repository.UserRepository;
 import com.example.springbootdemo.restfuldemo.service.UserService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.core.types.dsl.Expressions;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,10 +24,36 @@ import java.util.List;
  * @author jiancheng
  */
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    ResultVOBuilder resultVOBuilder;
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Transactional
+    @Override
+    public ResultVO<UserEntity> saveByResultVo(UserForm userForm) {
+        UserEntity userEntity = userRepository.save(UserEntity.build(userForm));
+        try {
+            log.info("保存完的数据为{}",objectMapper.writeValueAsString(userEntity));
+        } catch (JsonProcessingException e) {
+            log.error("json 序列化对象的时候异常{}",e);
+        }
+        if (1 == 1){
+            return resultVOBuilder.failure("报错异常,查看事务是否会回滚");
+        }
+        List<UserEntity> userEntityList = userRepository.findAll();
+        if (userEntityList != null){
+            log.info("当前查询的所有数据为空");
+            return ResultVOBuilder.success(userEntityList.get(0));
+        }
+        return ResultVOBuilder.success(null);
+    }
+
 
     @Transactional
     @Override
@@ -59,6 +90,8 @@ public class UserServiceImpl implements UserService {
         List<UserEntity> userEntityList = (List<UserEntity>) userRepository.findAll(last);
         return userEntityList;
     }
+
+
 
 
 }
