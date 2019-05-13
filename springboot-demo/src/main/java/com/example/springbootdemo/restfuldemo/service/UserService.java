@@ -6,7 +6,11 @@ import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
 
 import java.util.List;
 
-
+/**
+ * 服务层
+ *
+ * @author jiancheng
+ */
 public interface UserService {
 
     UserEntity save(UserForm userForm);

@@ -8,6 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 实体
+ *
+ * @author jiancheng
+ */
 @Data
 @Entity
 @Table(name = "biz_user")
