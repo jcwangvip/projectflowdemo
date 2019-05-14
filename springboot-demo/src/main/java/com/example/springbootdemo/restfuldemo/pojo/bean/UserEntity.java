@@ -18,21 +18,23 @@ import javax.persistence.Table;
 @Table(name = "biz_user")
 public class UserEntity {
 
-	@Id
-	@GeneratedValue
-	private Long id;
-	private String name;
-	private Integer age;
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String name;
+    private Integer age;
 
 
-	public UserEntity() {}
+    private UserEntity() {
+    }
 
-	public UserEntity(String name, Integer age) {
-		this.name = name;
-		this.age = age;
-	}
+    public UserEntity(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
 
-	public static UserEntity build(UserForm userForm) {
-		return new UserEntity(userForm.getName(),userForm.getAge());
-	}
+
+    public static UserEntity build(UserForm userForm) {
+        return new UserEntity(userForm.getName(), userForm.getAge());
+    }
 }

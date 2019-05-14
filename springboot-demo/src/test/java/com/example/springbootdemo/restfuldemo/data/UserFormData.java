@@ -14,6 +14,7 @@ public class UserFormData {
 
     public static UserForm getUserForm() {
         UserForm userForm = new UserForm();
+        userForm.setId(1L);
         userForm.setName("zhangsan");
         userForm.setAge(10);
         return userForm;

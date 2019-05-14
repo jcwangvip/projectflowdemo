@@ -134,6 +134,16 @@ public class CommonExceptionAdvice {
     }
 
     /**
+     * 500 - Internal Server Error
+     */
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler(RuntimeException.class)
+    public ResultVO handleRuntimeException(Exception e) {
+        log.error("服务器异常", e);
+        return resultVOBuilder.failure("global.exception.500_error", e.getMessage());
+    }
+
+    /**
      * 操作数据库出现异常:名称重复，外键关联
      */
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)

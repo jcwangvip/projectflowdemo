@@ -1,12 +1,16 @@
 package com.example.springbootdemo.restfuldemo.controller;
 
 import com.example.springbootdemo.common.ResultVO;
+import com.example.springbootdemo.common.ResultVOBuilder;
+import com.example.springbootdemo.common.utils.ValidateUtils;
 import com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
 import com.example.springbootdemo.restfuldemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -19,6 +23,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private ResultVOBuilder resultVOBuilder;
 
     @GetMapping("/hello")
     public String hello() {
@@ -46,9 +52,13 @@ public class UserController {
      * @return
      */
     @PostMapping("/save")
-    public UserEntity save(@RequestBody UserForm userForm) {
+    public ResultVO<UserEntity> save(@Valid @RequestBody UserForm userForm, BindingResult result) {
+        ResultVO<String> resultVO = ValidateUtils.validate(resultVOBuilder, result);
+        if (!resultVO.isSuccess()) {
+            return resultVOBuilder.failure(resultVO);
+        }
         UserEntity save = userService.save(userForm);
-        return save;
+        return ResultVOBuilder.success(save);
     }
 
     /**

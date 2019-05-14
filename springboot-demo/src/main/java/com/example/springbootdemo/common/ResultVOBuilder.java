@@ -38,9 +38,9 @@ public class ResultVOBuilder {
         return result;
     }
 
-    public static <T> ResultVO<T> failure(ResultVO<T> origin) {
+    public <T> ResultVO<T> failure(ResultVO<?> origin) {
         rollback();
-        return origin;
+        return (ResultVO<T>) origin;
     }
 
     public <T> ResultVO<T> failure(String errorCode, Object... errorArgs) {

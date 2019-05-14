@@ -11,11 +11,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.stereotype.Service;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -51,6 +48,21 @@ public class UserServiceImplTest {
     public void tearDown() throws Exception {
         log.info("结束");
     }
+
+    @Test
+    public void saveTransactional() {
+        try {
+            UserForm userForm = UserFormData.getUserForm();
+            UserEntity userEntity = this.userService.save(userForm);
+            UserEntity userEntity1 = this.userService.save(userForm);
+            Assert.assertEquals(userEntity.getName(), userForm.getName());
+        } catch (Exception e) {
+            log.error("发生异常{}", e);
+            List<UserEntity> userEntityList1 = userRepository.findAll();
+            assert userEntityList1.size() == 0;
+        }
+    }
+
 
     @Test
     public void save() {

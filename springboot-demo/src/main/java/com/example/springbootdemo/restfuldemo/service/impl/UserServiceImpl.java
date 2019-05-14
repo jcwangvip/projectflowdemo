@@ -36,18 +36,22 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public ResultVO<UserEntity> saveByResultVo(UserForm userForm,int stattus) {
+    public ResultVO<UserEntity> saveByResultVo(UserForm userForm, int stattus) {
         UserEntity userEntity = userRepository.save(UserEntity.build(userForm));
         try {
-            log.info("保存完的数据为{}",objectMapper.writeValueAsString(userEntity));
+            log.info("保存完的数据为{}", objectMapper.writeValueAsString(userEntity));
         } catch (JsonProcessingException e) {
-            log.error("json 序列化对象的时候异常{}",e);
+            log.error("json 序列化对象的时候异常{}", e);
         }
-        if (1 == stattus){
+        if (1 == stattus) {
             return resultVOBuilder.failure("报错异常,查看事务是否会回滚");
         }
+        if (2 == stattus) {
+            throw new RuntimeException("这里抛出运行时异常,会被谁捕捉到");
+        }
+
         List<UserEntity> userEntityList = userRepository.findAll();
-        if (userEntityList != null){
+        if (userEntityList != null) {
             log.info("当前查询的所有数据为空");
             return ResultVOBuilder.success(userEntityList.get(0));
         }
@@ -58,7 +62,8 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public UserEntity save(UserForm userForm) {
-        return userRepository.save(UserEntity.build(userForm));
+        UserEntity userEntity = userRepository.save(UserEntity.build(userForm));
+        return userEntity;
     }
 
 
@@ -90,8 +95,6 @@ public class UserServiceImpl implements UserService {
         List<UserEntity> userEntityList = (List<UserEntity>) userRepository.findAll(last);
         return userEntityList;
     }
-
-
 
 
 }
