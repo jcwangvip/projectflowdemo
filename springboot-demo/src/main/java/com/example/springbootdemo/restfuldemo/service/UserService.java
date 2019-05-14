@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface UserService {
 
-    ResultVO<UserEntity> saveByResultVo(UserForm userForm);
+    ResultVO<UserEntity> saveByResultVo(UserForm userForm, int stattus);
 
     UserEntity save(UserForm userForm);
 

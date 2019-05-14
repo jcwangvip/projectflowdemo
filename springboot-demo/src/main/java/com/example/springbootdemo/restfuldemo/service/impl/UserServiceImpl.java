@@ -36,14 +36,14 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public ResultVO<UserEntity> saveByResultVo(UserForm userForm) {
+    public ResultVO<UserEntity> saveByResultVo(UserForm userForm,int stattus) {
         UserEntity userEntity = userRepository.save(UserEntity.build(userForm));
         try {
             log.info("保存完的数据为{}",objectMapper.writeValueAsString(userEntity));
         } catch (JsonProcessingException e) {
             log.error("json 序列化对象的时候异常{}",e);
         }
-        if (1 == 1){
+        if (1 == stattus){
             return resultVOBuilder.failure("报错异常,查看事务是否会回滚");
         }
         List<UserEntity> userEntityList = userRepository.findAll();

@@ -28,7 +28,7 @@ public class SpringbootDemoApplication {
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.setBasenames("errorMessage", "constantMessage");
+        messageSource.setBasenames("errorMessage", "constantMessage", "globalErrorMessage");
         messageSource.setUseCodeAsDefaultMessage(true);
         return messageSource;
     }

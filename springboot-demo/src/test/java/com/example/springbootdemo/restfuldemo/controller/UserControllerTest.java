@@ -1,9 +1,12 @@
 package com.example.springbootdemo.restfuldemo.controller;
 
 import com.example.springbootdemo.restfuldemo.data.UserFormData;
+import com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
+import com.example.springbootdemo.restfuldemo.repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +27,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.util.List;
+
 /**
  * controller测试
  *
@@ -41,6 +46,8 @@ public class UserControllerTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
     private MockMvc mockMvc;
+    @Autowired
+    private UserRepository userRepository;
 
     public UserControllerTest() {
     }
@@ -48,7 +55,6 @@ public class UserControllerTest {
     @Before
     public void setUp() throws Exception {
         log.info("开始");
-        log.info("没有构建的mockMvn{}", this.mockMvc);
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
         log.info("构建完的mockMvn{}", this.mockMvc);
     }
@@ -61,9 +67,9 @@ public class UserControllerTest {
     @Test
     public void hello() {
         try {
-            this.mockMvc.perform(MockMvcRequestBuilders.get("/hello", new Object[0]).contentType(MediaType.APPLICATION_JSON)).andExpect(MockMvcResultMatchers.status().isOk()).andDo(MockMvcResultHandlers.print());
-        } catch (Exception var2) {
-            log.error("异常信息{}", var2);
+            this.mockMvc.perform(MockMvcRequestBuilders.get("/hello").contentType(MediaType.APPLICATION_JSON)).andExpect(MockMvcResultMatchers.status().isOk()).andDo(MockMvcResultHandlers.print());
+        } catch (Exception e) {
+            log.error("异常信息{}", e);
         }
     }
 
@@ -71,12 +77,18 @@ public class UserControllerTest {
     public void saveByResultVo() {
         try {
             UserForm userForm = UserFormData.getUserForm();
-            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.post("/saveByResultVo", new Object[0]);
+            int status = 1;
+            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.post("/saveByResultVo");
             mockHttpServletRequestBuilder.contentType(MediaType.APPLICATION_JSON);
-            mockHttpServletRequestBuilder.content(this.objectMapper.writeValueAsString(userForm));
+            mockHttpServletRequestBuilder.content(objectMapper.writeValueAsString(userForm));
+            mockHttpServletRequestBuilder.param("status", status + "");
+
             MvcResult mvcResult = this.getMvcResult(mockHttpServletRequestBuilder);
             MockHttpServletResponse response = mvcResult.getResponse();
             log.info("输出结果{}", response.getContentAsString());
+            List<UserEntity> userEntityList = userRepository.findAll();
+            log.info("当前从查询到到集合为{}", userEntityList.size());
+            assert userEntityList.size() == 0;
         } catch (Exception var5) {
             log.error("异常信息{}", var5);
         }
@@ -86,14 +98,15 @@ public class UserControllerTest {
     public void save() {
         try {
             UserForm userForm = UserFormData.getUserForm();
-            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.post("/save", new Object[0]);
+            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.post("/save");
             mockHttpServletRequestBuilder.contentType(MediaType.APPLICATION_JSON);
             mockHttpServletRequestBuilder.content(this.objectMapper.writeValueAsString(userForm));
+
             MvcResult mvcResult = this.getMvcResult(mockHttpServletRequestBuilder);
             MockHttpServletResponse response = mvcResult.getResponse();
             log.info("输出结果{}", response.getContentAsString());
-        } catch (Exception var5) {
-            log.error("异常信息{}", var5);
+        } catch (Exception e) {
+            log.error("异常信息{}", e);
         }
     }
 
@@ -103,7 +116,7 @@ public class UserControllerTest {
             UserForm userForm = UserFormData.getUserForm();
             userForm.setId(1L);
             userForm.setName("list");
-            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.put("/update", new Object[0]);
+            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.put("/update");
             mockHttpServletRequestBuilder.contentType(MediaType.APPLICATION_JSON);
             mockHttpServletRequestBuilder.content(this.objectMapper.writeValueAsString(userForm));
             MvcResult mvcResult = this.getMvcResult(mockHttpServletRequestBuilder);
@@ -121,7 +134,7 @@ public class UserControllerTest {
     @Test
     public void findOneById() {
         try {
-            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.get("/findOneById", new Object[0]);
+            MockHttpServletRequestBuilder mockHttpServletRequestBuilder = MockMvcRequestBuilders.get("/findOneById");
             mockHttpServletRequestBuilder.contentType(MediaType.APPLICATION_JSON);
             mockHttpServletRequestBuilder.content("1L");
             MvcResult mvcResult = this.getMvcResult(mockHttpServletRequestBuilder);
