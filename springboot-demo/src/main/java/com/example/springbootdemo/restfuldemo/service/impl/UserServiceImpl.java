@@ -71,6 +71,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserEntity update(UserForm userForm) {
         UserEntity userEntity = userRepository.getOne(userForm.getId());
+        if (userEntity == null){
+            return null;
+        }
         return userRepository.save(UserEntity.build(userForm));
     }
 

@@ -25,7 +25,7 @@ public class UserEntity {
     private Integer age;
 
 
-    private UserEntity() {
+    public UserEntity() {
     }
 
     public UserEntity(String name, Integer age) {
