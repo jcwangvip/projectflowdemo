@@ -1,5 +1,11 @@
 # projectFlowDemo
 
+##关于springboot
+```
+文件application.properties 和 application.yml 文件中谁会覆盖谁?
+答案:properties会覆盖yml文件->可以看restService中端口号的最后结果
+
+```
 ##关于测试
 ```
 测试的时候不要多个地方保存数据
@@ -15,5 +21,4 @@
 1.不要私有化实体对象的无参构造方法 
 原因:会造成getOne(id)方法异常
 现象:java.lang.InstantiationException: com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity$HibernateProxy$RdR8KJ4Z
-
 ```

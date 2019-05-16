@@ -21,6 +21,7 @@
     <modules>
         <module>common</module>
         <module>springboot-demo</module>
+        <module>restService</module>
     </modules>
 
 
