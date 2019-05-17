@@ -1,6 +1,6 @@
-package com.examplespringbootdemo.service.controller;
+package com.example.springbootdemo.service.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import com.example.springbootdemo.service.vo.HelloVO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,9 +18,9 @@ public class UserController {
         return "hello word";
     }
 
-    @GetMapping("/nameHello")
-    public String hello(String name) {
-        return name + " : hello word";
+    @RequestMapping("/nameHello")
+    public String hello(HelloVO helloVO) {
+        return "hello word" + helloVO.toString();
     }
 
 

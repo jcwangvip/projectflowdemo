@@ -3,6 +3,7 @@ package com.example.springbootdemo.common.utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -46,6 +47,9 @@ public class OkHttpClientUtil {
      * @throws IOException
      */
     public String getRequest(String url, Map<String, String> map) throws IOException {
+        if (StringUtils.isBlank(url)) {
+            return "url不能为空";
+        }
         String apiUrl = getUrl(url, map);
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url(apiUrl).get()
@@ -58,9 +62,13 @@ public class OkHttpClientUtil {
     }
 
     public String postRequest(String url, Map<String, String> map) throws IOException {
-
-        String apiUrl = getUrl(url, map);
-        RequestBody requestBody = new FormBody.Builder().build();
+        if (StringUtils.isBlank(url)) {
+            return "url不能为空";
+        }
+        String apiUrl = url;
+        FormBody.Builder builder = new FormBody.Builder();
+        map.forEach((a, b) -> builder.add(a, b));
+        RequestBody requestBody = builder.build();
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url(apiUrl).post(requestBody)
                 .addHeader("cache-control", "no-cache")

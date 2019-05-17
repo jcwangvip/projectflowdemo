@@ -3,6 +3,8 @@ package com.example.springbootdemo.okhttp;
 import com.example.springbootdemo.common.ResultVO;
 import com.example.springbootdemo.common.ResultVOBuilder;
 import com.example.springbootdemo.common.utils.OkHttpClientUtil;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -38,6 +40,8 @@ public class OkHttpController {
         return ResultVOBuilder.success(result);
     }
 
+
+    @ApiOperation(value = "测试Post请求http://localhost:8080/testPost?name=zhangsan&urlValue=http://127.0.0.1:8089/nameHello")
     @GetMapping("/testPost")
     public ResultVO<String> testPost(@RequestParam Map<String, String> map) throws IOException {
         String url = map.get("urlValue");
