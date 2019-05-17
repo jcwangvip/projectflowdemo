@@ -1,9 +1,8 @@
-package com.example.springbootdemo.okhttp;
+package com.example.springbootdemo.okhttp.controller;
 
 import com.example.springbootdemo.common.ResultVO;
 import com.example.springbootdemo.common.ResultVOBuilder;
-import com.example.springbootdemo.common.utils.OkHttpClientUtil;
-import io.swagger.annotations.ApiModelProperty;
+import com.example.springbootdemo.okhttp.utils.OkHttpClientUtil;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

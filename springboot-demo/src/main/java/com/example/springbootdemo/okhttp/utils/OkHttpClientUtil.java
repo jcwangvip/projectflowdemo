@@ -1,4 +1,4 @@
-package com.example.springbootdemo.common.utils;
+package com.example.springbootdemo.okhttp.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
