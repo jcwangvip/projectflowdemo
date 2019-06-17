@@ -22,3 +22,10 @@
 原因:会造成getOne(id)方法异常
 现象:java.lang.InstantiationException: com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity$HibernateProxy$RdR8KJ4Z
 ```
+##关于@Scheduled(cron = "${dateValue}")
+```
+1.在springBoot 1中,直接在方法上加上就能用,
+    在springBoot2中,还要多加一个@EnableScheduling注解,加载当前类上和启动类上都行,
+    建议加载启动类上
+    
+```

@@ -7,12 +7,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * 项目启动类
  *
  * @author jiancheng
  */
+@EnableScheduling
 @SpringBootApplication
 public class SpringbootDemoApplication {
 
