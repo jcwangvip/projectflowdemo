@@ -3,10 +3,7 @@ package com.example.springbootdemo.restfuldemo.pojo.bean;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * 实体
@@ -19,7 +16,7 @@ import javax.persistence.Table;
 public class UserEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Integer age;
