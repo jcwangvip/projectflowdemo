@@ -14,8 +14,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.CollectionUtils;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * service测试
@@ -70,6 +72,26 @@ public class UserServiceImplTest {
         UserEntity userEntity = this.userService.save(userForm);
         Assert.assertEquals(userEntity.getName(), userForm.getName());
     }
+
+
+    @Test
+    public void saveById() {
+        List<UserEntity> serEntityListBefore = userRepository.findAll();
+        if (CollectionUtils.isEmpty(serEntityListBefore)) {
+            this.save();
+            this.saveById();
+        }
+        UserEntity userEntity = serEntityListBefore.get(0);
+        UserEntity saveUserEntity = userService.saveById(userEntity.getId());
+        Optional<UserEntity> optionalUserEntity = userRepository.findById(userEntity.getId());
+        if (!optionalUserEntity.isPresent()) {
+            Assert.assertTrue(false);
+        }
+        UserEntity userEntityAfter = optionalUserEntity.get();
+        Assert.assertNotEquals(userEntity.getName(), saveUserEntity.getName());
+        Assert.assertEquals(saveUserEntity.getName(), userEntityAfter.getName());
+    }
+
 
     @Test
     public void saveByResultVo() {

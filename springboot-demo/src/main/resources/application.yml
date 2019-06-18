@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: springboot-demo
   datasource:
     validation-query: SELECT 1
     validation-query-timeout: 5000
@@ -16,7 +18,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-    #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    这句话代表创建表的存储引擎
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
 
-
+logging:
+  file: target/${spring.application.name}.log

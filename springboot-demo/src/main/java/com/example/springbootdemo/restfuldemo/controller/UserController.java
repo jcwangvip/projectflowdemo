@@ -61,6 +61,12 @@ public class UserController {
         return ResultVOBuilder.success(save);
     }
 
+    @GetMapping("/saveById")
+    public ResultVO<UserEntity> saveById(Long id) {
+        UserEntity save = userService.saveById(id);
+        return ResultVOBuilder.success(save);
+    }
+
     /**
      * 修改
      *

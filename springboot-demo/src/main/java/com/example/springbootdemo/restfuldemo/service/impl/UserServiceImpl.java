@@ -14,6 +14,8 @@ import com.querydsl.core.types.dsl.Expressions;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.support.TransactionSynchronizationAdapter;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -36,17 +38,17 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public ResultVO<UserEntity> saveByResultVo(UserForm userForm, int stattus) {
+    public ResultVO<UserEntity> saveByResultVo(UserForm userForm, int status) {
         UserEntity userEntity = userRepository.save(UserEntity.build(userForm));
         try {
             log.info("保存完的数据为{}", objectMapper.writeValueAsString(userEntity));
         } catch (JsonProcessingException e) {
             log.error("json 序列化对象的时候异常{}", e);
         }
-        if (1 == stattus) {
+        if (1 == status) {
             return resultVOBuilder.failure("报错异常,查看事务是否会回滚");
         }
-        if (2 == stattus) {
+        if (2 == status) {
             throw new RuntimeException("这里抛出运行时异常,会被谁捕捉到");
         }
 
@@ -63,6 +65,29 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserEntity save(UserForm userForm) {
         UserEntity userEntity = userRepository.save(UserEntity.build(userForm));
+        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronizationAdapter() {
+            @Override
+            public void afterCommit() {
+                try {
+                    log.info("事务结束后在做的事userEntity = {}", objectMapper.writeValueAsString(userEntity));
+                    assert userEntity.getId() != null;
+                } catch (JsonProcessingException e) {
+                    log.error("异常{}", e);
+                }
+            }
+        });
+        return userEntity;
+    }
+
+
+//    @Transactional(value = Transactional.TxType.SUPPORTS)
+    @Transactional
+    @Override
+    public UserEntity saveById(Long id) {
+        UserEntity userEntity = this.findOneById(id);
+        if (userEntity != null) {
+            userEntity.setName(userEntity.getName() + "1");
+        }
         return userEntity;
     }
 
@@ -71,7 +96,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserEntity update(UserForm userForm) {
         UserEntity userEntity = userRepository.getOne(userForm.getId());
-        if (userEntity == null){
+        if (userEntity == null) {
             return null;
         }
         return userRepository.save(UserEntity.build(userForm));
