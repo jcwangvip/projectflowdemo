@@ -29,3 +29,13 @@
     建议加载启动类上
     
 ```
+##关于配置文件加载的顺序
+```
+说是先加载properties文件中的信息,有的话就不加载后面的配置文件中的了
+如果光有properties 和 yml 文件的话,z properties中的为主
+如果是properties、yml 和 -dev 有具体环境标识的时候, -dev 中的为主
+    注意默认不会加载带环境的配置文件
+    需要执行后才会是上面的
+        properties 中指定 spring.profiles.active=dev
+        yml 中指定 同 properties,只不过换成树结构
+``` 

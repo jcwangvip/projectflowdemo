@@ -1,3 +1,5 @@
+server:
+  port: 8089
 spring:
   application:
     name: springboot-demo
@@ -7,9 +9,9 @@ spring:
     test-on-borrow: true
     test-on-connect: true
     driver-class-name: com.mysql.jdbc.Driver
-#    username: root
-#    password: root
-#    url: jdbc:mysql://localhost:3306/fly?characterEncoding=utf-8&useSSL=false
+    #    username: root
+    #    password: root
+    #    url: jdbc:mysql://localhost:3306/fly?characterEncoding=utf-8&useSSL=false
     username: root
     password: root123
     url: jdbc:mysql://127.0.0.1:3306/projectFlowDemo?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
@@ -18,8 +20,11 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-#    这句话代表创建表的存储引擎
+    #    这句话代表创建表的存储引擎
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  profiles:
+    active: dev
 
 
 logging:
