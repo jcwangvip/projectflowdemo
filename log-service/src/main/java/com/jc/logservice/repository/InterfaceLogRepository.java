@@ -1,10 +1,8 @@
 package com.jc.logservice.repository;
 
-import com.jc.logservice.entity.LogEntity;
+import com.jc.logservice.entity.InterfaceLogEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class InterfaceLogRepository {
+public interface InterfaceLogRepository extends JpaRepository<InterfaceLogEntity, Long> {
 
-    public void save(LogEntity logEntity) {
-        System.out.println("InterfaceLogRepository执行保存" + logEntity);
-    }
 }

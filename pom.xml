@@ -23,6 +23,7 @@
         <module>springboot-demo</module>
         <module>restService</module>
         <module>log-service</module>
+        <module>message-service</module>
     </modules>
 
 
