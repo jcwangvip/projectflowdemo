@@ -5,7 +5,7 @@ import com.example.springbootdemo.common.ResultVOBuilder;
 import com.example.springbootdemo.common.utils.ValidateUtils;
 import com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
-import com.example.springbootdemo.restfuldemo.service.UserService;
+import com.example.springbootdemo.restfuldemo.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +22,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    private SysUserService userService;
     @Autowired
     private ResultVOBuilder resultVOBuilder;
 

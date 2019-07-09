@@ -19,6 +19,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+      # 下面两行是在数据库中生成字段的时候,和实体一一对应,不写的话,生成字段的时候两个单词之间有大写的,会被转成小写加下划线
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
     show-sql: true
     #    这句话代表创建表的存储引擎
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect

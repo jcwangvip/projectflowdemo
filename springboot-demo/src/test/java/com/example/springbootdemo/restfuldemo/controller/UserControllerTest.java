@@ -3,10 +3,9 @@ package com.example.springbootdemo.restfuldemo.controller;
 import com.example.springbootdemo.restfuldemo.data.UserFormData;
 import com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
-import com.example.springbootdemo.restfuldemo.repository.UserRepository;
+import com.example.springbootdemo.restfuldemo.repository.SysUserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -47,7 +46,7 @@ public class UserControllerTest {
     private WebApplicationContext webApplicationContext;
     private MockMvc mockMvc;
     @Autowired
-    private UserRepository userRepository;
+    private SysUserRepository userRepository;
 
     public UserControllerTest() {
     }

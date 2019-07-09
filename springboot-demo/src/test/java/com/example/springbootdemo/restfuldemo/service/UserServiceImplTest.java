@@ -4,7 +4,7 @@ import com.example.springbootdemo.common.ResultVO;
 import com.example.springbootdemo.restfuldemo.data.UserFormData;
 import com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
-import com.example.springbootdemo.restfuldemo.repository.UserRepository;
+import com.example.springbootdemo.restfuldemo.repository.SysUserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.After;
 import org.junit.Assert;
@@ -33,9 +33,9 @@ public class UserServiceImplTest {
 
 
     @Autowired
-    UserService userService;
+    SysUserService userService;
     @Autowired
-    UserRepository userRepository;
+    SysUserRepository userRepository;
 
     public UserServiceImplTest() {
     }

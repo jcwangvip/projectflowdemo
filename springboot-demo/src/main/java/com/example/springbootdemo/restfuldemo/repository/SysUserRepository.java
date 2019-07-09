@@ -13,11 +13,11 @@ import java.util.List;
 
 
 /**
- * UserRepository
+ * SysUserRepository
  *
  * @author jiancheng
  */
-public interface UserRepository extends JpaRepository<UserEntity, Long>, QuerydslPredicateExecutor<UserEntity> {
+public interface SysUserRepository extends JpaRepository<UserEntity, Long>, QuerydslPredicateExecutor<UserEntity> {
 
 
     /**

@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author jiancheng
  */
-public interface UserService {
+public interface SysUserService {
 
     ResultVO<UserEntity> saveByResultVo(UserForm userForm, int stattus);
 

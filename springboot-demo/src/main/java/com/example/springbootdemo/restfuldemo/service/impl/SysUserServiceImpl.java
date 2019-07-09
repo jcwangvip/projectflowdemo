@@ -5,8 +5,8 @@ import com.example.springbootdemo.common.ResultVO;
 import com.example.springbootdemo.common.ResultVOBuilder;
 import com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity;
 import com.example.springbootdemo.restfuldemo.pojo.vo.UserForm;
-import com.example.springbootdemo.restfuldemo.repository.UserRepository;
-import com.example.springbootdemo.restfuldemo.service.UserService;
+import com.example.springbootdemo.restfuldemo.repository.SysUserRepository;
+import com.example.springbootdemo.restfuldemo.service.SysUserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.querydsl.core.types.dsl.BooleanExpression;
@@ -27,10 +27,10 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class UserServiceImpl implements UserService {
+public class SysUserServiceImpl implements SysUserService {
 
     @Autowired
-    UserRepository userRepository;
+    SysUserRepository userRepository;
     @Autowired
     ResultVOBuilder resultVOBuilder;
     @Autowired
@@ -119,7 +119,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserEntity> findByUserForm(UserForm userForm) {
         BooleanExpression last = Expressions.asBoolean(true).isTrue();
-        last = UserRepository.getBooleanExpression(userForm, last);
+        last = SysUserRepository.getBooleanExpression(userForm, last);
         List<UserEntity> userEntityList = (List<UserEntity>) userRepository.findAll(last);
         return userEntityList;
     }
