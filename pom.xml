@@ -24,6 +24,7 @@
         <module>restService</module>
         <module>log-service</module>
         <module>message-service</module>
+        <module>java-base</module>
     </modules>
 
 
