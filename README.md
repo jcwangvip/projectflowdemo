@@ -20,7 +20,7 @@
 ```
 1.不要私有化实体对象的无参构造方法 
 原因:会造成getOne(id)方法异常
-现象:java.lang.InstantiationException: com.example.springbootdemo.restfuldemo.pojo.bean.UserEntity$HibernateProxy$RdR8KJ4Z
+现象:java.lang.InstantiationException: UserEntity$HibernateProxy$RdR8KJ4Z
 ```
 ##关于@Scheduled(cron = "${dateValue}")
 ```

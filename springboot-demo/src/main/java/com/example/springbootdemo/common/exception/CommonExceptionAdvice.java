@@ -1,7 +1,7 @@
 package com.example.springbootdemo.common.exception;
 
-import com.example.springbootdemo.common.ResultVO;
-import com.example.springbootdemo.common.ResultVOBuilder;
+import com.example.springbootdemo.common.vo.ResultVO;
+import com.example.springbootdemo.common.vo.ResultVOBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;

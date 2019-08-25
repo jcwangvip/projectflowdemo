@@ -1,7 +1,7 @@
 package com.example.springbootdemo.common.utils;
 
-import com.example.springbootdemo.common.ResultVO;
-import com.example.springbootdemo.common.ResultVOBuilder;
+import com.example.springbootdemo.common.vo.ResultVO;
+import com.example.springbootdemo.common.vo.ResultVOBuilder;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 

@@ -1,6 +1,6 @@
 package com.example.springbootdemo;
 
-import com.example.springbootdemo.common.ResultVOBuilder;
+import com.example.springbootdemo.common.vo.ResultVOBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
