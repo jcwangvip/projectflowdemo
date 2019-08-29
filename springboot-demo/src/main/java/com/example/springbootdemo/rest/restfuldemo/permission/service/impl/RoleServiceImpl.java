@@ -1,11 +1,11 @@
-package com.example.springbootdemo.rest.restfuldemo.demo.permission.service.impl;
+package com.example.springbootdemo.rest.restfuldemo.permission.service.impl;
 
 import com.example.springbootdemo.common.vo.ResultVO;
 import com.example.springbootdemo.common.vo.ResultVOBuilder;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.bean.RoleEntity;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.form.RoleForm;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.repository.RoleRepository;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.service.RoleService;
+import com.example.springbootdemo.rest.restfuldemo.permission.bean.RoleEntity;
+import com.example.springbootdemo.rest.restfuldemo.permission.form.RoleForm;
+import com.example.springbootdemo.rest.restfuldemo.permission.repository.RoleRepository;
+import com.example.springbootdemo.rest.restfuldemo.permission.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

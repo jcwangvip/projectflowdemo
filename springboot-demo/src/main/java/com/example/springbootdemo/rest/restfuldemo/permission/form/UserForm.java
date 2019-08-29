@@ -1,6 +1,6 @@
-package com.example.springbootdemo.rest.restfuldemo.demo.permission.form;
+package com.example.springbootdemo.rest.restfuldemo.permission.form;
 
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.bean.RoleEntity;
+import com.example.springbootdemo.rest.restfuldemo.permission.bean.RoleEntity;
 import lombok.Data;
 
 import javax.persistence.Transient;

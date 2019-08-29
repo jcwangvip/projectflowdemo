@@ -1,4 +1,4 @@
-package com.example.springbootdemo.rest.restfuldemo.demo.permission.form;
+package com.example.springbootdemo.rest.restfuldemo.permission.form;
 
 import lombok.Data;
 

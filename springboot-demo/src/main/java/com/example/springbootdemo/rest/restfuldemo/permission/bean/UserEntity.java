@@ -1,7 +1,7 @@
-package com.example.springbootdemo.rest.restfuldemo.demo.permission.bean;
+package com.example.springbootdemo.rest.restfuldemo.permission.bean;
 
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.form.UserUpdateForm;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.form.UserForm;
+import com.example.springbootdemo.rest.restfuldemo.permission.form.UserUpdateForm;
+import com.example.springbootdemo.rest.restfuldemo.permission.form.UserForm;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.annotations.CreationTimestamp;

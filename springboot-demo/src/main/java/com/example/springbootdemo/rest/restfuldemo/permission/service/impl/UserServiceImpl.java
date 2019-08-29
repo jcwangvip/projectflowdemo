@@ -1,14 +1,14 @@
-package com.example.springbootdemo.rest.restfuldemo.demo.permission.service.impl;
+package com.example.springbootdemo.rest.restfuldemo.permission.service.impl;
 
 import com.example.springbootdemo.common.vo.ResultVO;
 import com.example.springbootdemo.common.vo.ResultVOBuilder;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.bean.UserEntity;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.form.UserForm;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.form.UserUpdateForm;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.repository.RoleRepository;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.repository.UserRepository;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.service.UserService;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.bean.RoleEntity;
+import com.example.springbootdemo.rest.restfuldemo.permission.bean.UserEntity;
+import com.example.springbootdemo.rest.restfuldemo.permission.form.UserForm;
+import com.example.springbootdemo.rest.restfuldemo.permission.form.UserUpdateForm;
+import com.example.springbootdemo.rest.restfuldemo.permission.repository.RoleRepository;
+import com.example.springbootdemo.rest.restfuldemo.permission.repository.UserRepository;
+import com.example.springbootdemo.rest.restfuldemo.permission.service.UserService;
+import com.example.springbootdemo.rest.restfuldemo.permission.bean.RoleEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

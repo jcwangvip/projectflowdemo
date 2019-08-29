@@ -1,7 +1,7 @@
-package com.example.springbootdemo.rest.restfuldemo.demo.permission.bean;
+package com.example.springbootdemo.rest.restfuldemo.permission.bean;
 
 
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.form.RoleForm;
+import com.example.springbootdemo.rest.restfuldemo.permission.form.RoleForm;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -28,8 +28,7 @@ public class RoleEntity {
     @Column(unique = true, nullable = false)
     private String name;
     private Long parentId;
-    @ManyToOne(fetch = FetchType.EAGER)
-    private List<UserEntity> users;
+
     @CreationTimestamp
     private Date createTime;
     private String createName;
@@ -37,6 +36,11 @@ public class RoleEntity {
 
     @Version
     private short version;
+
+    @Transient
+//    @ManyToOne(fetch = FetchType.EAGER)
+    private List<UserEntity> users;
+
 
     public RoleEntity() {
     }

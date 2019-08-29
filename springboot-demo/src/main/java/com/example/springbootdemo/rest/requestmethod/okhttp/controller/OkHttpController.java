@@ -24,14 +24,14 @@ public class OkHttpController {
     @Autowired
     OkHttpClientUtil okHttpClientUtil;
 
-    @GetMapping("/getHello")
+    @GetMapping("/get")
     public ResultVO<String> getHello() throws IOException {
         String result = okHttpClientUtil.getHelloTest();
         return ResultVOBuilder.success(result);
     }
 
 
-    @GetMapping("/getNameHello")
+    @GetMapping("/getName")
     public ResultVO<String> getNameHello(@RequestParam Map<String, String> map) throws IOException {
         String url = map.get("urlValue");
         map.remove("urlValue");

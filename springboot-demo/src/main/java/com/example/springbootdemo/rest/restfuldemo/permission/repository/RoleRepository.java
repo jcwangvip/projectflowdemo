@@ -1,7 +1,7 @@
-package com.example.springbootdemo.rest.restfuldemo.demo.permission.repository;
+package com.example.springbootdemo.rest.restfuldemo.permission.repository;
 
 
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.bean.RoleEntity;
+import com.example.springbootdemo.rest.restfuldemo.permission.bean.RoleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 

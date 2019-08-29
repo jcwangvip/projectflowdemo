@@ -18,7 +18,7 @@ import java.util.Map;
  * @author jiancheng
  * @date 2019-7-16
  */
-@RestController("restTemplates")
+@RestController("restTemplatesss")
 public class RestTemplatesController {
 
     @Autowired

@@ -1,10 +1,10 @@
-package com.example.springbootdemo.rest.restfuldemo.demo.permission.service;
+package com.example.springbootdemo.rest.restfuldemo.permission.service;
 
 
 import com.example.springbootdemo.common.vo.ResultVO;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.bean.UserEntity;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.form.UserForm;
-import com.example.springbootdemo.rest.restfuldemo.demo.permission.form.UserUpdateForm;
+import com.example.springbootdemo.rest.restfuldemo.permission.bean.UserEntity;
+import com.example.springbootdemo.rest.restfuldemo.permission.form.UserForm;
+import com.example.springbootdemo.rest.restfuldemo.permission.form.UserUpdateForm;
 
 /**
  * 用户服务类
