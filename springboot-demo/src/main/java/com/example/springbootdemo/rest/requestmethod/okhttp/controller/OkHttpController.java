@@ -6,6 +6,7 @@ import com.example.springbootdemo.rest.requestmethod.okhttp.utils.OkHttpClientUt
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,8 @@ import java.util.Map;
  * @author jiancheng
  * @date 2019-5-16
  */
-@RestController("okhttp")
+@RestController
+@RequestMapping("okhttp")
 public class OkHttpController {
 
     @Autowired
