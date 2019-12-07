@@ -54,6 +54,7 @@ public class OkHttpClientUtil {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url(apiUrl).get()
                 .addHeader("cache-control", "no-cache")
+                .addHeader("SERVICE-AUTHENTICATION","eyJhbGciOiJIUzI1NiJ9.eyJzZXJ2aWNlTmFtZSI6IjgzOCIsInNlcnZpY2VLZXkiOiJhNWM4M2VjYzRlZWQ0YTc1OGI0MDc5OTcwMDZkY2ZmMiIsInNlcnZpY2VUeXBlIjoiMSIsInNlcnZpY2VBcHAiOiIzODAiLCJzZXJ2aWNlQ2x1c3RlciI6IjIiLCJqdGkiOiIxNTFhMDIwN2EwOTA0YzE5OTA0ZjJkZmIwYjRmZjBlMCIsImlhdCI6MTU2Njc5OTQ5MX0.2JzI1Ho6jCWTfvyernZCzpwFJlZpuMF9aBCINnWKFl0")
                 .build();
         Response response = client.newCall(request).execute();
         String responseBodyString = response.body().string();

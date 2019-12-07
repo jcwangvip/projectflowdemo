@@ -17,7 +17,7 @@ public class ThreadLocalDemo implements Runnable {
 
     public static void main(String[] args) {
         ExecutorService es = newFixedThreadPool(5);
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < 20; i++) {
             ThreadLocalDemo threadLocalDemo = new ThreadLocalDemo();
             es.execute(threadLocalDemo);
         }
@@ -28,12 +28,15 @@ public class ThreadLocalDemo implements Runnable {
     @Override
     public void run() {
         System.out.println("start -> current = " + threadLocal.get());
-        threadLocal.set(Thread.currentThread().getName());
+        String name = Thread.currentThread().getName();
+        long id = Thread.currentThread().getId();
+        String threadName = "id = " + id + " - name " + name;
+        threadLocal.set(threadName);
         test();
     }
 
     private void test() {
-        System.out.println("test -> current ThreadName = " + threadLocal.get());
+        System.out.println("test -> current ThreadName = (" + threadLocal.get() + ") - threadId = " + Thread.currentThread().getId());
     }
 
 }

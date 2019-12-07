@@ -1,4 +1,4 @@
-package com.jc.javabase.java.lang.thread;
+package com.jc.javabase.java.lang.runnable;
 
 /**
  * 线程测试类

@@ -1,4 +1,4 @@
-package com.jc.javabase.java.lang.thread;
+package com.jc.javabase.java.util.concurrent;
 
 import java.util.Random;
 import java.util.concurrent.Callable;

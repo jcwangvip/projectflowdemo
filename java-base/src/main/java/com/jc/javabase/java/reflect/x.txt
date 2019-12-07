@@ -1,0 +1,309 @@
+ 当前的clazz = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ ************字段 = testInt *****************
+ x name = testInt, x = private int com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.testInt
+ getDeclaringClass() 返回表示类或接口的 Class 对象 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ getGenericType() 返回一个 Type 对象，它表示此 Field 对象所表示字段的声明类型 = int
+ getModifiers() 以整数形式返回由此 Field 对象表示的字段的 Java 语言修饰符 = 2
+ getType() 返回一个 Class 对象，它标识了此 Field 对象所表示字段的声明类型 = int
+   ***** clazz ****
+   getCanonicalName() 返回 Java Language Specification 中所定义的底层类的规范化名称 = int
+   getClasses() 返回一个包含某些 Class 对象的数组，这些对象表示属于此 Class 对象所表示的类的成员的所有公共类和接口 = {}
+   getClassLoader() 返回该类的类加载器 = null
+   getComponentType() 返回表示数组组件类型的 Class = null
+   getConstructors() 返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法 = {}
+   getDeclaredClasses() 返回 Class 对象的一个数组，这些对象反映声明为此 Class 对象所表示的类的成员的所有类和接口 = {}
+   getDeclaringClass() 如果此 Class 对象所表示的类或接口是另一个类的成员，则返回的 Class 对象表示该对象的声明类 = null
+   getEnumConstants() 如果此 Class 对象不表示枚举类型，则返回枚举类的元素或 null = {}
+   getGenericInterfaces() 返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现 = {}
+   getGenericSuperclass() 返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type = null
+   getInterfaces() 确定此对象所表示的类或接口实现的接口 = {}
+   getModifiers() 返回此类或接口以整数编码的 Java 语言修饰符 = 1041
+   getName() 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称 = int
+   getPackage() 获取此类的包 = null
+   getProtectionDomain() 返回该类的 ProtectionDomain = ProtectionDomain  null
+
+
+   getSigners() 获取此类的标记 = {}
+   getSimpleName() 返回源代码中给出的底层类的简称 = int
+   返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class = null
+   当且仅当该类声明为源代码中的枚举时返回 true = false
+   判定指定的 Class 对象是否表示一个接口类型 = false
+   当且仅当底层类是本地类时返回 true = false
+   当且仅当底层类是成员类时返回 true = false
+   判定指定的 Class 对象是否表示一个基本类型 = true
+   如果此类是复合类，则返回 true，否则 false = false
+ isEnumConstant() 如果此字段表示枚举类型的元素，则返回 true；否则返回 false = false
+ isSynthetic() 如果此字段是复合字段，则返回 true；否则返回 false = false
+ ************字段 = testInteger *****************
+ x name = testInteger, x = private java.lang.Integer com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.testInteger
+ getDeclaringClass() 返回表示类或接口的 Class 对象 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ getGenericType() 返回一个 Type 对象，它表示此 Field 对象所表示字段的声明类型 = class java.lang.Integer
+ getModifiers() 以整数形式返回由此 Field 对象表示的字段的 Java 语言修饰符 = 2
+ getType() 返回一个 Class 对象，它标识了此 Field 对象所表示字段的声明类型 = class java.lang.Integer
+   ***** clazz ****
+   getCanonicalName() 返回 Java Language Specification 中所定义的底层类的规范化名称 = java.lang.Integer
+   getClasses() 返回一个包含某些 Class 对象的数组，这些对象表示属于此 Class 对象所表示的类的成员的所有公共类和接口 = {}
+   getClassLoader() 返回该类的类加载器 = null
+   getComponentType() 返回表示数组组件类型的 Class = null
+   getConstructors() 返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法 = public java.lang.Integer(int)
+   getDeclaredClasses() 返回 Class 对象的一个数组，这些对象反映声明为此 Class 对象所表示的类的成员的所有类和接口 = class java.lang.Integer$IntegerCache
+   getDeclaringClass() 如果此 Class 对象所表示的类或接口是另一个类的成员，则返回的 Class 对象表示该对象的声明类 = null
+   getEnumConstants() 如果此 Class 对象不表示枚举类型，则返回枚举类的元素或 null = {}
+   getGenericInterfaces() 返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现 = java.lang.Comparable<java.lang.Integer>
+   getGenericSuperclass() 返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type = class java.lang.Number
+   getInterfaces() 确定此对象所表示的类或接口实现的接口 = interface java.lang.Comparable
+   getModifiers() 返回此类或接口以整数编码的 Java 语言修饰符 = 17
+   getName() 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称 = java.lang.Integer
+   getPackage() 获取此类的包 = package java.lang, Java Platform API Specification, version 1.8
+   getProtectionDomain() 返回该类的 ProtectionDomain = ProtectionDomain  null
+
+
+   getSigners() 获取此类的标记 = {}
+   getSimpleName() 返回源代码中给出的底层类的简称 = Integer
+   返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class = class java.lang.Number
+   当且仅当该类声明为源代码中的枚举时返回 true = false
+   判定指定的 Class 对象是否表示一个接口类型 = false
+   当且仅当底层类是本地类时返回 true = false
+   当且仅当底层类是成员类时返回 true = false
+   判定指定的 Class 对象是否表示一个基本类型 = false
+   如果此类是复合类，则返回 true，否则 false = false
+ isEnumConstant() 如果此字段表示枚举类型的元素，则返回 true；否则返回 false = false
+ isSynthetic() 如果此字段是复合字段，则返回 true；否则返回 false = false
+ ************字段 = testString *****************
+ x name = testString, x = private java.lang.String com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.testString
+ getDeclaringClass() 返回表示类或接口的 Class 对象 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ getGenericType() 返回一个 Type 对象，它表示此 Field 对象所表示字段的声明类型 = class java.lang.String
+ getModifiers() 以整数形式返回由此 Field 对象表示的字段的 Java 语言修饰符 = 2
+ getType() 返回一个 Class 对象，它标识了此 Field 对象所表示字段的声明类型 = class java.lang.String
+   ***** clazz ****
+   getCanonicalName() 返回 Java Language Specification 中所定义的底层类的规范化名称 = java.lang.String
+   getClasses() 返回一个包含某些 Class 对象的数组，这些对象表示属于此 Class 对象所表示的类的成员的所有公共类和接口 = {}
+   getClassLoader() 返回该类的类加载器 = null
+   getComponentType() 返回表示数组组件类型的 Class = null
+   getConstructors() 返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法 = public java.lang.String(byte[],int,int)
+   getDeclaredClasses() 返回 Class 对象的一个数组，这些对象反映声明为此 Class 对象所表示的类的成员的所有类和接口 = class java.lang.String$CaseInsensitiveComparator
+   getDeclaringClass() 如果此 Class 对象所表示的类或接口是另一个类的成员，则返回的 Class 对象表示该对象的声明类 = null
+   getEnumConstants() 如果此 Class 对象不表示枚举类型，则返回枚举类的元素或 null = {}
+   getGenericInterfaces() 返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现 = interface java.io.Serializable
+   getGenericSuperclass() 返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type = class java.lang.Object
+   getInterfaces() 确定此对象所表示的类或接口实现的接口 = interface java.io.Serializable
+   getModifiers() 返回此类或接口以整数编码的 Java 语言修饰符 = 17
+   getName() 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称 = java.lang.String
+   getPackage() 获取此类的包 = package java.lang, Java Platform API Specification, version 1.8
+   getProtectionDomain() 返回该类的 ProtectionDomain = ProtectionDomain  null
+
+
+   getSigners() 获取此类的标记 = {}
+   getSimpleName() 返回源代码中给出的底层类的简称 = String
+   返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class = class java.lang.Object
+   当且仅当该类声明为源代码中的枚举时返回 true = false
+   判定指定的 Class 对象是否表示一个接口类型 = false
+   当且仅当底层类是本地类时返回 true = false
+   当且仅当底层类是成员类时返回 true = false
+   判定指定的 Class 对象是否表示一个基本类型 = false
+   如果此类是复合类，则返回 true，否则 false = false
+   创建此 Class 对象所表示的类的一个新实例 =
+ isEnumConstant() 如果此字段表示枚举类型的元素，则返回 true；否则返回 false = false
+ isSynthetic() 如果此字段是复合字段，则返回 true；否则返回 false = false
+ ************字段 = testStringDf *****************
+ x name = testStringDf, x = java.lang.String com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.testStringDf
+ getDeclaringClass() 返回表示类或接口的 Class 对象 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ getGenericType() 返回一个 Type 对象，它表示此 Field 对象所表示字段的声明类型 = class java.lang.String
+ getModifiers() 以整数形式返回由此 Field 对象表示的字段的 Java 语言修饰符 = 0
+ getType() 返回一个 Class 对象，它标识了此 Field 对象所表示字段的声明类型 = class java.lang.String
+   ***** clazz ****
+   getCanonicalName() 返回 Java Language Specification 中所定义的底层类的规范化名称 = java.lang.String
+   getClasses() 返回一个包含某些 Class 对象的数组，这些对象表示属于此 Class 对象所表示的类的成员的所有公共类和接口 = {}
+   getClassLoader() 返回该类的类加载器 = null
+   getComponentType() 返回表示数组组件类型的 Class = null
+   getConstructors() 返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法 = public java.lang.String(byte[],int,int)
+   getDeclaredClasses() 返回 Class 对象的一个数组，这些对象反映声明为此 Class 对象所表示的类的成员的所有类和接口 = class java.lang.String$CaseInsensitiveComparator
+   getDeclaringClass() 如果此 Class 对象所表示的类或接口是另一个类的成员，则返回的 Class 对象表示该对象的声明类 = null
+   getEnumConstants() 如果此 Class 对象不表示枚举类型，则返回枚举类的元素或 null = {}
+   getGenericInterfaces() 返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现 = interface java.io.Serializable
+   getGenericSuperclass() 返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type = class java.lang.Object
+   getInterfaces() 确定此对象所表示的类或接口实现的接口 = interface java.io.Serializable
+   getModifiers() 返回此类或接口以整数编码的 Java 语言修饰符 = 17
+   getName() 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称 = java.lang.String
+   getPackage() 获取此类的包 = package java.lang, Java Platform API Specification, version 1.8
+   getProtectionDomain() 返回该类的 ProtectionDomain = ProtectionDomain  null
+
+
+   getSigners() 获取此类的标记 = {}
+   getSimpleName() 返回源代码中给出的底层类的简称 = String
+   返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class = class java.lang.Object
+   当且仅当该类声明为源代码中的枚举时返回 true = false
+   判定指定的 Class 对象是否表示一个接口类型 = false
+   当且仅当底层类是本地类时返回 true = false
+   当且仅当底层类是成员类时返回 true = false
+   判定指定的 Class 对象是否表示一个基本类型 = false
+   如果此类是复合类，则返回 true，否则 false = false
+   创建此 Class 对象所表示的类的一个新实例 =
+ isEnumConstant() 如果此字段表示枚举类型的元素，则返回 true；否则返回 false = false
+ isSynthetic() 如果此字段是复合字段，则返回 true；否则返回 false = false
+ ************字段 = testStringProtected *****************
+ x name = testStringProtected, x = protected java.lang.String com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.testStringProtected
+ getDeclaringClass() 返回表示类或接口的 Class 对象 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ getGenericType() 返回一个 Type 对象，它表示此 Field 对象所表示字段的声明类型 = class java.lang.String
+ getModifiers() 以整数形式返回由此 Field 对象表示的字段的 Java 语言修饰符 = 4
+ getType() 返回一个 Class 对象，它标识了此 Field 对象所表示字段的声明类型 = class java.lang.String
+   ***** clazz ****
+   getCanonicalName() 返回 Java Language Specification 中所定义的底层类的规范化名称 = java.lang.String
+   getClasses() 返回一个包含某些 Class 对象的数组，这些对象表示属于此 Class 对象所表示的类的成员的所有公共类和接口 = {}
+   getClassLoader() 返回该类的类加载器 = null
+   getComponentType() 返回表示数组组件类型的 Class = null
+   getConstructors() 返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法 = public java.lang.String(byte[],int,int)
+   getDeclaredClasses() 返回 Class 对象的一个数组，这些对象反映声明为此 Class 对象所表示的类的成员的所有类和接口 = class java.lang.String$CaseInsensitiveComparator
+   getDeclaringClass() 如果此 Class 对象所表示的类或接口是另一个类的成员，则返回的 Class 对象表示该对象的声明类 = null
+   getEnumConstants() 如果此 Class 对象不表示枚举类型，则返回枚举类的元素或 null = {}
+   getGenericInterfaces() 返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现 = interface java.io.Serializable
+   getGenericSuperclass() 返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type = class java.lang.Object
+   getInterfaces() 确定此对象所表示的类或接口实现的接口 = interface java.io.Serializable
+   getModifiers() 返回此类或接口以整数编码的 Java 语言修饰符 = 17
+   getName() 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称 = java.lang.String
+   getPackage() 获取此类的包 = package java.lang, Java Platform API Specification, version 1.8
+   getProtectionDomain() 返回该类的 ProtectionDomain = ProtectionDomain  null
+
+
+   getSigners() 获取此类的标记 = {}
+   getSimpleName() 返回源代码中给出的底层类的简称 = String
+   返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class = class java.lang.Object
+   当且仅当该类声明为源代码中的枚举时返回 true = false
+   判定指定的 Class 对象是否表示一个接口类型 = false
+   当且仅当底层类是本地类时返回 true = false
+   当且仅当底层类是成员类时返回 true = false
+   判定指定的 Class 对象是否表示一个基本类型 = false
+   如果此类是复合类，则返回 true，否则 false = false
+   创建此 Class 对象所表示的类的一个新实例 =
+ isEnumConstant() 如果此字段表示枚举类型的元素，则返回 true；否则返回 false = false
+ isSynthetic() 如果此字段是复合字段，则返回 true；否则返回 false = false
+ ************字段 = testStringPublic *****************
+ x name = testStringPublic, x = public java.lang.String com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.testStringPublic
+ getDeclaringClass() 返回表示类或接口的 Class 对象 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ getGenericType() 返回一个 Type 对象，它表示此 Field 对象所表示字段的声明类型 = class java.lang.String
+ getModifiers() 以整数形式返回由此 Field 对象表示的字段的 Java 语言修饰符 = 1
+ getType() 返回一个 Class 对象，它标识了此 Field 对象所表示字段的声明类型 = class java.lang.String
+   ***** clazz ****
+   getCanonicalName() 返回 Java Language Specification 中所定义的底层类的规范化名称 = java.lang.String
+   getClasses() 返回一个包含某些 Class 对象的数组，这些对象表示属于此 Class 对象所表示的类的成员的所有公共类和接口 = {}
+   getClassLoader() 返回该类的类加载器 = null
+   getComponentType() 返回表示数组组件类型的 Class = null
+   getConstructors() 返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法 = public java.lang.String(byte[],int,int)
+   getDeclaredClasses() 返回 Class 对象的一个数组，这些对象反映声明为此 Class 对象所表示的类的成员的所有类和接口 = class java.lang.String$CaseInsensitiveComparator
+   getDeclaringClass() 如果此 Class 对象所表示的类或接口是另一个类的成员，则返回的 Class 对象表示该对象的声明类 = null
+   getEnumConstants() 如果此 Class 对象不表示枚举类型，则返回枚举类的元素或 null = {}
+   getGenericInterfaces() 返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现 = interface java.io.Serializable
+   getGenericSuperclass() 返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type = class java.lang.Object
+   getInterfaces() 确定此对象所表示的类或接口实现的接口 = interface java.io.Serializable
+   getModifiers() 返回此类或接口以整数编码的 Java 语言修饰符 = 17
+   getName() 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称 = java.lang.String
+   getPackage() 获取此类的包 = package java.lang, Java Platform API Specification, version 1.8
+   getProtectionDomain() 返回该类的 ProtectionDomain = ProtectionDomain  null
+
+
+   getSigners() 获取此类的标记 = {}
+   getSimpleName() 返回源代码中给出的底层类的简称 = String
+   返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class = class java.lang.Object
+   当且仅当该类声明为源代码中的枚举时返回 true = false
+   判定指定的 Class 对象是否表示一个接口类型 = false
+   当且仅当底层类是本地类时返回 true = false
+   当且仅当底层类是成员类时返回 true = false
+   判定指定的 Class 对象是否表示一个基本类型 = false
+   如果此类是复合类，则返回 true，否则 false = false
+   创建此 Class 对象所表示的类的一个新实例 =
+ isEnumConstant() 如果此字段表示枚举类型的元素，则返回 true；否则返回 false = false
+ isSynthetic() 如果此字段是复合字段，则返回 true；否则返回 false = false
+ ************字段 = reflectionEnum *****************
+ x name = reflectionEnum, x = private com.pcsd.sme.productmanagement.rest.product.service.ReflectionEnum com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.reflectionEnum
+ getDeclaringClass() 返回表示类或接口的 Class 对象 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ getGenericType() 返回一个 Type 对象，它表示此 Field 对象所表示字段的声明类型 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionEnum
+ getModifiers() 以整数形式返回由此 Field 对象表示的字段的 Java 语言修饰符 = 2
+ getType() 返回一个 Class 对象，它标识了此 Field 对象所表示字段的声明类型 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionEnum
+   ***** clazz ****
+   getCanonicalName() 返回 Java Language Specification 中所定义的底层类的规范化名称 = com.pcsd.sme.productmanagement.rest.product.service.ReflectionEnum
+   getClasses() 返回一个包含某些 Class 对象的数组，这些对象表示属于此 Class 对象所表示的类的成员的所有公共类和接口 = {}
+   getClassLoader() 返回该类的类加载器 = sun.misc.Launcher$AppClassLoader@18b4aac2
+   getComponentType() 返回表示数组组件类型的 Class = null
+   getConstructors() 返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法 = {}
+   getDeclaredClasses() 返回 Class 对象的一个数组，这些对象反映声明为此 Class 对象所表示的类的成员的所有类和接口 = {}
+   getDeclaringClass() 如果此 Class 对象所表示的类或接口是另一个类的成员，则返回的 Class 对象表示该对象的声明类 = null
+   getEnumConstants() 如果此 Class 对象不表示枚举类型，则返回枚举类的元素或 null = NAME
+   getGenericInterfaces() 返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现 = {}
+   getGenericSuperclass() 返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type = java.lang.Enum<com.pcsd.sme.productmanagement.rest.product.service.ReflectionEnum>
+   getInterfaces() 确定此对象所表示的类或接口实现的接口 = {}
+   getModifiers() 返回此类或接口以整数编码的 Java 语言修饰符 = 16401
+   getName() 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称 = com.pcsd.sme.productmanagement.rest.product.service.ReflectionEnum
+   getPackage() 获取此类的包 = package com.pcsd.sme.productmanagement.rest.product.service
+   getProtectionDomain() 返回该类的 ProtectionDomain = ProtectionDomain  (file:/D:/work/lenovobtbp/projects/sme/pcsd-sme-productmanagement/target/test-classes/ <no signer certificates>)
+ ("java.util.PropertyPermission" "os.arch" "read")
+ ("java.util.PropertyPermission" "java.specification.vendor" "read")
+ ("java.util.PropertyPermission" "java.vm.specification.name" "read")
+ ("java.util.PropertyPermission" "java.vm.vendor" "read")
+ ("java.util.PropertyPermission" "path.separator" "read")
+ ("java.util.PropertyPermission" "os.version" "read")
+ ("java.util.PropertyPermission" "file.separator" "read")
+ ("java.util.PropertyPermission" "line.separator" "read")
+ ("java.util.PropertyPermission" "java.vm.specification.vendor" "read")
+ ("java.util.PropertyPermission" "java.specification.name" "read")
+ ("java.util.PropertyPermission" "java.vendor.url" "read")
+ ("java.util.PropertyPermission" "java.vendor" "read")
+ ("java.util.PropertyPermission" "java.vm.version" "read")
+ ("java.util.PropertyPermission" "java.vm.name" "read")
+ ("java.util.PropertyPermission" "java.vm.specification.version" "read")
+ ("java.util.PropertyPermission" "os.name" "read")
+ ("java.util.PropertyPermission" "java.class.version" "read")
+ ("java.io.FilePermission" "\D:\work\lenovobtbp\projects\sme\pcsd-sme-productmanagement\target\test-classes\-" "read")
+ ("java.lang.RuntimePermission" "exitVM")
+ ("java.lang.RuntimePermission" "stopThread")
+ ("java.net.SocketPermission" "localhost:0" "listen,resolve")
+)
+
+
+   getSigners() 获取此类的标记 = {}
+   getSimpleName() 返回源代码中给出的底层类的简称 = ReflectionEnum
+   返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class = class java.lang.Enum
+   当且仅当该类声明为源代码中的枚举时返回 true = true
+   判定指定的 Class 对象是否表示一个接口类型 = false
+   当且仅当底层类是本地类时返回 true = false
+   当且仅当底层类是成员类时返回 true = false
+   判定指定的 Class 对象是否表示一个基本类型 = false
+   如果此类是复合类，则返回 true，否则 false = false
+ isEnumConstant() 如果此字段表示枚举类型的元素，则返回 true；否则返回 false = false
+ isSynthetic() 如果此字段是复合字段，则返回 true；否则返回 false = false
+ ************字段 = reflectionDetailVOList *****************
+ x name = reflectionDetailVOList, x = private java.util.List com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.reflectionDetailVOList
+ getDeclaringClass() 返回表示类或接口的 Class 对象 = class com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO
+ getGenericType() 返回一个 Type 对象，它表示此 Field 对象所表示字段的声明类型 = java.util.List<com.pcsd.sme.productmanagement.rest.product.service.ReflectionDetailVO>
+ getModifiers() 以整数形式返回由此 Field 对象表示的字段的 Java 语言修饰符 = 2
+ getType() 返回一个 Class 对象，它标识了此 Field 对象所表示字段的声明类型 = interface java.util.List
+   ***** clazz ****
+   getCanonicalName() 返回 Java Language Specification 中所定义的底层类的规范化名称 = java.util.List
+   getClasses() 返回一个包含某些 Class 对象的数组，这些对象表示属于此 Class 对象所表示的类的成员的所有公共类和接口 = {}
+   getClassLoader() 返回该类的类加载器 = null
+   getComponentType() 返回表示数组组件类型的 Class = null
+   getConstructors() 返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法 = {}
+   getDeclaredClasses() 返回 Class 对象的一个数组，这些对象反映声明为此 Class 对象所表示的类的成员的所有类和接口 = {}
+   getDeclaringClass() 如果此 Class 对象所表示的类或接口是另一个类的成员，则返回的 Class 对象表示该对象的声明类 = null
+   getEnumConstants() 如果此 Class 对象不表示枚举类型，则返回枚举类的元素或 null = {}
+   getGenericInterfaces() 返回表示某些接口的 Type，这些接口由此对象所表示的类或接口直接实现 = java.util.Collection<E>
+   getGenericSuperclass() 返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的直接超类的 Type = null
+   getInterfaces() 确定此对象所表示的类或接口实现的接口 = interface java.util.Collection
+   getModifiers() 返回此类或接口以整数编码的 Java 语言修饰符 = 1537
+   getName() 以 String 的形式返回此 Class 对象所表示的实体（类、接口、数组类、基本类型或 void）名称 = java.util.List
+   getPackage() 获取此类的包 = package java.util, Java Platform API Specification, version 1.8
+   getProtectionDomain() 返回该类的 ProtectionDomain = ProtectionDomain  null
+
+
+   getSigners() 获取此类的标记 = {}
+   getSimpleName() 返回源代码中给出的底层类的简称 = List
+   返回表示此 Class 所表示的实体（类、接口、基本类型或 void）的超类的 Class = null
+   当且仅当该类声明为源代码中的枚举时返回 true = false
+   判定指定的 Class 对象是否表示一个接口类型 = true
+   当且仅当底层类是本地类时返回 true = false
+   当且仅当底层类是成员类时返回 true = false
+   判定指定的 Class 对象是否表示一个基本类型 = false
+   如果此类是复合类，则返回 true，否则 false = false
+ isEnumConstant() 如果此字段表示枚举类型的元素，则返回 true；否则返回 false = false
+ isSynthetic() 如果此字段是复合字段，则返回 true；否则返回 false = false
+ 获取当道fields = private int com.pcsd.sme.productmanagement.rest.product.service.ReflectionVO.testInt
+
