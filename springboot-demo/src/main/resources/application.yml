@@ -34,3 +34,23 @@ spring:
 
 logging:
   file: target/${spring.application.name}.log
+
+test:
+  type: a
+  name: cs
+  oneList: [c1,java1]
+  oneList1:
+  - c11
+  - java111
+  oneMap: {k: v, k1: v1}
+  owner:
+    name: jc
+    age: 18
+    list: [c,java,js]
+    oneMap: {k: v, k1: v1, k2: v2}
+  localClassInfo:
+    name: jc1
+    age: 18
+    list: [c,java,js]
+    oneMap: {k: v, k1: v1, k2: v2}
+
